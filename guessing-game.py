@@ -3,15 +3,21 @@ def main ():
 main ()
 
 answer = "lion"
+
+def end ():
+    print ("If you would like to exit game, type QUIT")
+
 def game ():
-    global answer 
+    end()
+    print("I'm thinking of an animal...") 
+    global answer
     while True:
-        print("I'm thinking of an animal...") 
         guess = input ("Guess the name of the animal: ".lower().strip())
-        return guess
-        if guess == "lion":
-            print ("You are correct!")
+        if guess == "quit":
             break
+        elif guess == "lion":
+            print ("You are correct!")
+            break 
         else:
             print ("Please try again")
 game() 
